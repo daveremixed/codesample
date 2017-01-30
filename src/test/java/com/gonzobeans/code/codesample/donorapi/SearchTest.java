@@ -4,9 +4,6 @@ import com.gonzobeans.code.codesample.util.Logging;
 import org.junit.Assert;
 import org.junit.Test;
 
-import javax.ws.rs.core.Response;
-
-
 import java.util.List;
 
 import static com.gonzobeans.code.codesample.util.StateAbbreviations.CALIFORNIA;
@@ -16,8 +13,11 @@ import static com.gonzobeans.code.codesample.util.StateAbbreviations.CALIFORNIA;
  */
 public class SearchTest implements Logging{
 
+    //TODO: Refactor tests with a data provider
+
     @Test
     public void searchTest() {
+        //This demonstrates usage of the builder pattern ... it makes the code nice and neat
         SearchRequest request = new SearchRequest.SearchRequestBuilder()
                 .withCostToCompleteMinimum(0)
                 .withCostToCompleteMaximum(2000)
