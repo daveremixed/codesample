@@ -10,9 +10,9 @@ public class Proposal {
     private String title;
     private String shortDescription;
     private String proposalURL;
-    private String percentFunded;
+    private Float percentFunded;
     private Integer numDonors;
-    private String costToComplete;
+    private Float costToComplete;
     private Integer numStudents;
     private Float totalPrice;
 
@@ -45,11 +45,11 @@ public class Proposal {
         this.proposalURL = proposalURL;
     }
 
-    public String getPercentFunded() {
+    public Float getPercentFunded() {
         return percentFunded;
     }
 
-    public void setPercentFunded(String percentFunded) {
+    public void setPercentFunded(Float percentFunded) {
         this.percentFunded = percentFunded;
     }
 
@@ -61,11 +61,11 @@ public class Proposal {
         this.numDonors = numDonors;
     }
 
-    public String getCostToComplete() {
+    public Float getCostToComplete() {
         return costToComplete;
     }
 
-    public void setCostToComplete(String costToComplete) {
+    public void setCostToComplete(Float costToComplete) {
         this.costToComplete = costToComplete;
     }
 
