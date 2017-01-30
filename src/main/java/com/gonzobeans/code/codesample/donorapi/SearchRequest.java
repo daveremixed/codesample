@@ -24,7 +24,7 @@ public class SearchRequest {
         this.apiKey = ApplicationConstants.API_KEY;
     }
 
-    void setSearchString(String searchString) {
+    public void setSearchString(String searchString) {
         this.searchString = searchString;
     }
 
