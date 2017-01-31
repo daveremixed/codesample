@@ -48,7 +48,8 @@ public class main {
 
             System.out.println("Title: " + p.getTitle() + "\n" +
                     "Description: " + p.getShortDescription() + "\n" +
-                    "URL: " + p.getProposalURL() + "\n");
+                    "URL: " + p.getProposalURL() + "\n" +
+                    "Cost to Complete:  $" + p.getCostToComplete() + "\n");
         }
 
         printAverage("PercentFunded", funded, proposalList.size());
@@ -59,7 +60,11 @@ public class main {
     }
 
     private static void printAverage(String name, Double elementTotal, int numElements) {
-        System.out.println(String.format("Average %s: %2$,.2f", name, (elementTotal / numElements)));
+        String dollarSign = "";
+        if (name.toLowerCase().contains("cost")) {
+            dollarSign = "$";
+        }
+        System.out.println(String.format("Average %s: %s%3$,.2f", name, dollarSign, (elementTotal / numElements)));
     }
 
 }
