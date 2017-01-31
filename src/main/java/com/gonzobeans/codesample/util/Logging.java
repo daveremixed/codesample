@@ -1,4 +1,4 @@
-package com.gonzobeans.code.codesample.util;
+package com.gonzobeans.codesample.util;
 
 
 import org.slf4j.Logger;

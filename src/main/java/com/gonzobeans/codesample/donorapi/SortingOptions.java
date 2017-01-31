@@ -1,4 +1,4 @@
-package com.gonzobeans.code.codesample.donorapi;
+package com.gonzobeans.codesample.donorapi;
 
 /**
  * Created by Dave on 1/29/2017.

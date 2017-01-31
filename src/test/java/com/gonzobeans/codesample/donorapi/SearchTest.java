@@ -1,12 +1,12 @@
-package com.gonzobeans.code.codesample.donorapi;
+package com.gonzobeans.codesample.donorapi;
 
-import com.gonzobeans.code.codesample.util.Logging;
+import com.gonzobeans.codesample.util.Logging;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.List;
 
-import static com.gonzobeans.code.codesample.util.StateAbbreviations.CALIFORNIA;
+import static com.gonzobeans.codesample.util.StateAbbreviations.CALIFORNIA;
 
 /**
  * Created by Dave on 1/29/2017.

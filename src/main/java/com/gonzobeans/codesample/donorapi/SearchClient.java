@@ -1,6 +1,6 @@
-package com.gonzobeans.code.codesample.donorapi;
+package com.gonzobeans.codesample.donorapi;
 
-import com.gonzobeans.code.codesample.util.Logging;
+import com.gonzobeans.codesample.util.Logging;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.jboss.resteasy.client.jaxrs.ResteasyClient;
 import org.jboss.resteasy.client.jaxrs.ResteasyClientBuilder;
@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.Map;
 
-import static com.gonzobeans.code.codesample.util.ApplicationConstants.DONOR_API_TARGET;
+import static com.gonzobeans.codesample.util.ApplicationConstants.DONOR_API_TARGET;
 
 /**
  * Created by Dave on 1/29/2017.

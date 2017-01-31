@@ -14,13 +14,13 @@ Don’t worry about Docker if you haven’t used it.
 5. Results should be limited to California
 6. Funding cost should be within $0 -  $2,000
 7. Results should be sorted by the following criteria:
-     a. Highest Urgency should be shown first
-     b. Results should only list the following information for each proposal:
+     * Highest Urgency should be shown first
+     * Results should only list the following information for each proposal:
           - Title
           - Short Description
           - ProposalURL
           - Cost To Complete
-     c. List the average totals for the following values (aggregated from all five of the listed proposals):
+     * List the average totals for the following values (aggregated from all five of the listed proposals):
           - Percent Funded
           - Number of Donors
           - Cost To Complete
@@ -33,7 +33,7 @@ Originally I thought a nice interface would be through the web, so I selected a 
 As I ended up spending more time than intended, I decided to meet the requirements with the command line, however the
 code is well organized and can easily serve both interfaces.  
 
-Launching the application with the class com.gonzobeans.code.codesample.command.Main with command line arguments will
+Launching the application with the class *com.gonzobeans.codesample.command.Main* with command line arguments will
 produce console output to specification.
 
 Usage of the builder pattern makes the API extremely easy to call and the code very readable

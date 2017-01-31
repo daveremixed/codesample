@@ -1,4 +1,4 @@
-package com.gonzobeans.code.codesample.util;
+package com.gonzobeans.codesample.util;
 
 /**
  * Created by Dave on 1/29/2017.

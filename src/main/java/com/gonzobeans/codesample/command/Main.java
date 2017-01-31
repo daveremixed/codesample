@@ -1,14 +1,14 @@
-package com.gonzobeans.code.codesample.command;
+package com.gonzobeans.codesample.command;
 
-import com.gonzobeans.code.codesample.donorapi.Proposal;
-import com.gonzobeans.code.codesample.donorapi.SearchClient;
-import com.gonzobeans.code.codesample.donorapi.SearchRequest;
-import com.gonzobeans.code.codesample.donorapi.SortingOptions;
+import com.gonzobeans.codesample.donorapi.Proposal;
+import com.gonzobeans.codesample.donorapi.SearchClient;
+import com.gonzobeans.codesample.donorapi.SearchRequest;
+import com.gonzobeans.codesample.donorapi.SortingOptions;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.List;
 
-import static com.gonzobeans.code.codesample.util.StateAbbreviations.CALIFORNIA;
+import static com.gonzobeans.codesample.util.StateAbbreviations.CALIFORNIA;
 
 /**
  * Created by Dave on 1/30/2017.

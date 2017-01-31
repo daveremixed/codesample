@@ -1,4 +1,4 @@
-package com.gonzobeans.code.codesample.donorapi;
+package com.gonzobeans.codesample.donorapi;
 
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 

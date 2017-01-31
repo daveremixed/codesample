@@ -1,6 +1,6 @@
-package com.gonzobeans.code.codesample.donorapi;
+package com.gonzobeans.codesample.donorapi;
 
-import com.gonzobeans.code.codesample.util.ApplicationConstants;
+import com.gonzobeans.codesample.util.ApplicationConstants;
 
 import java.util.HashMap;
 import java.util.Map;
