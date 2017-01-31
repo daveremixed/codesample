@@ -4,6 +4,7 @@ import com.gonzobeans.codesample.donorapi.Proposal;
 import com.gonzobeans.codesample.donorapi.SearchClient;
 import com.gonzobeans.codesample.donorapi.SearchRequest;
 import com.gonzobeans.codesample.donorapi.SortingOptions;
+import com.gonzobeans.codesample.util.Logging;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.List;
@@ -13,7 +14,7 @@ import static com.gonzobeans.codesample.util.StateAbbreviations.CALIFORNIA;
 /**
  * Created by Dave on 1/30/2017.
  */
-public class Main {
+public class Main implements Logging {
     public static void main(String[] args) {
         String searchTerms = String.join(" ", args);
 
@@ -31,8 +32,24 @@ public class Main {
             searchRequest.setSearchString(searchTerms);
         }
 
-        List<Proposal> proposalList = client.search(searchRequest).getProposals();
+        List<Proposal> proposalList = null;
+        try {
+            proposalList = client.search(searchRequest).getProposals();
+        } catch (Exception e) {
+            LOG.error("Could not communicate with server", e);
+        }
 
+        if (proposalList == null) {
+            System.out.println("Error while communicating with the server.");
+        } else if (proposalList.isEmpty()) {
+            System.out.println("Search Terms: " + searchTerms);
+            System.out.println("Received no data from the server");
+        } else {
+            printResults(proposalList);
+        }
+    }
+
+    private static void printResults(List<Proposal> proposalList) {
         Double funded = 0.0;
         Double costToComplete = 0.0;
         Double numStudents = 0.0;
@@ -51,6 +68,7 @@ public class Main {
                     "URL: " + p.getProposalURL() + "\n" +
                     "Cost to Complete:  $" + p.getCostToComplete() + "\n");
         }
+
 
         printAverage("PercentFunded", funded, proposalList.size());
         printAverage("Cost to Complete", costToComplete, proposalList.size());
