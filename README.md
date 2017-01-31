@@ -39,4 +39,11 @@ produce console output to specification.
 Usage of the builder pattern makes the API extremely easy to call and the code very readable
 
 I structured the code in such a way that I feel lends to easy updating, readability and reuse, but without adding lots
-of extra unnecessary unused pieces.
+of extra unnecessary unused pieces.  The donorservlet demonstrates the reusability in regular JSP.  I haven't wired up
+the JSP to a web page yet.  I was also considering Angular for the project.  This is something I haven't done much of,
+so the learning curve kind of took me out of the timebox I gave myself.
+
+Logging as an interface is something that is kind of neat.  The interface produces a static LOG that uses methodhandles
+to determine the class.  Now all you need to do to add a log to a class is add "implements Logging".  Changes made
+to the interface will cascade to all the classes that implement it, so say for example if you switch from Log4J to Slf4J 
+there is no issue.
