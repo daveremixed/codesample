@@ -13,7 +13,7 @@ import static com.gonzobeans.code.codesample.util.StateAbbreviations.CALIFORNIA;
 /**
  * Created by Dave on 1/30/2017.
  */
-public class main {
+public class Main {
     public static void main(String[] args) {
         String searchTerms = String.join(" ", args);
 
