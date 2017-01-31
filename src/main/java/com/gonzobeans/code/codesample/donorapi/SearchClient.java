@@ -1,7 +1,5 @@
 package com.gonzobeans.code.codesample.donorapi;
 
-import static com.gonzobeans.code.codesample.util.ApplicationConstants.DONOR_API_TARGET;
-
 import com.gonzobeans.code.codesample.util.Logging;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.jboss.resteasy.client.jaxrs.ResteasyClient;
@@ -13,8 +11,10 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.Response;
 import java.io.IOException;
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.Map;
+
+import static com.gonzobeans.code.codesample.util.ApplicationConstants.DONOR_API_TARGET;
 
 /**
  * Created by Dave on 1/29/2017.
@@ -27,7 +27,7 @@ public class SearchClient implements Logging {
         MultivaluedMap<String, Object> queryParameters = new MultivaluedMapImpl<>();
         for (Map.Entry<String, String> parameter : searchRequest.getQueryParameters().entrySet()) {
             if (parameter.getValue() != null) {
-                queryParameters.put(parameter.getKey(), Arrays.asList(parameter.getValue()));
+                queryParameters.put(parameter.getKey(), Collections.singletonList(parameter.getValue()));
             }
         }
 

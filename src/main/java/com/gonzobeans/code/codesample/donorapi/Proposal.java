@@ -25,64 +25,32 @@ public class Proposal {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public String getShortDescription() {
         return shortDescription;
-    }
-
-    public void setShortDescription(String shortDescription) {
-        this.shortDescription = shortDescription;
     }
 
     public String getProposalURL() {
         return proposalURL;
     }
 
-    public void setProposalURL(String proposalURL) {
-        this.proposalURL = proposalURL;
-    }
-
     public Float getPercentFunded() {
         return percentFunded;
-    }
-
-    public void setPercentFunded(Float percentFunded) {
-        this.percentFunded = percentFunded;
     }
 
     public Integer getNumDonors() {
         return numDonors;
     }
 
-    public void setNumDonors(Integer numDonors) {
-        this.numDonors = numDonors;
-    }
-
     public Float getCostToComplete() {
         return costToComplete;
-    }
-
-    public void setCostToComplete(Float costToComplete) {
-        this.costToComplete = costToComplete;
     }
 
     public Integer getNumStudents() {
         return numStudents;
     }
 
-    public void setNumStudents(Integer numStudents) {
-        this.numStudents = numStudents;
-    }
-
     public Float getTotalPrice() {
         return totalPrice;
-    }
-
-    public void setTotalPrice(Float totalPrice) {
-        this.totalPrice = totalPrice;
     }
 
     @Override
