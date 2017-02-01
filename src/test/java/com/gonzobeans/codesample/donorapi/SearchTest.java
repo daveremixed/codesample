@@ -10,6 +10,7 @@ import static com.gonzobeans.codesample.util.StateAbbreviations.CALIFORNIA;
 
 /**
  * Created by Dave on 1/29/2017.
+ *
  */
 public class SearchTest implements Logging {
 
@@ -29,7 +30,7 @@ public class SearchTest implements Logging {
 
         SearchClient client = new SearchClient();
         List<Proposal> proposals = client.search(request).getProposals();
-        Assert.assertEquals(proposals.size(), 5);
+        Assert.assertEquals(5, proposals.size());
         proposals.forEach(p -> {
             Assert.assertTrue(p.getTotalPrice() <= 2000);
             // Skipping State Assertion because state was not one of the requested data return types
@@ -48,7 +49,7 @@ public class SearchTest implements Logging {
 
         SearchClient client = new SearchClient();
         List<Proposal> proposals = client.search(request).getProposals();
-        Assert.assertEquals(proposals.size(), 5);
+        Assert.assertEquals(5, proposals.size());
         proposals.forEach(p -> {
             LOG.info(p.toString());
         });
@@ -58,13 +59,13 @@ public class SearchTest implements Logging {
     public void ManyResults() {
         SearchRequest request = new SearchRequest.SearchRequestBuilder()
                 .withNumResults(50)
-                .withCostToCompleteMinimum(4000)
+                .withCostToCompleteMinimum(10000)
                 .withSortingOptions(SortingOptions.URGENCY)
                 .build();
 
         SearchClient client = new SearchClient();
         List<Proposal> proposals = client.search(request).getProposals();
-        Assert.assertEquals(proposals.size(), 50);
+        Assert.assertEquals(50, proposals.size());
         proposals.forEach(p -> {
             LOG.info(p.toString());
         });
