@@ -18,6 +18,7 @@ import static com.gonzobeans.codesample.util.ApplicationConstants.DONOR_API_TARG
 
 /**
  * Created by Dave on 1/29/2017.
+ *
  */
 public class SearchClient implements Logging {
 
@@ -25,7 +26,7 @@ public class SearchClient implements Logging {
         ResteasyClient client = new ResteasyClientBuilder().build();
 
         MultivaluedMap<String, Object> queryParameters = new MultivaluedMapImpl<>();
-        for (Map.Entry<String, String> parameter : searchRequest.getQueryParameters().entrySet()) {
+        for (Map.Entry<String, Object> parameter : searchRequest.getQueryParameters().entrySet()) {
             if (parameter.getValue() != null) {
                 queryParameters.put(parameter.getKey(), Collections.singletonList(parameter.getValue()));
             }

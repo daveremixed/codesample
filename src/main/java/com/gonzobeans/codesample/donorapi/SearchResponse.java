@@ -7,6 +7,7 @@ import java.util.List;
 
 /**
  * Created by Dave on 1/29/2017.
+ *
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class SearchResponse {
@@ -20,7 +21,4 @@ public class SearchResponse {
         return proposals;
     }
 
-    public void setProposals(List<Proposal> proposals) {
-        this.proposals = proposals;
-    }
 }

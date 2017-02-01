@@ -13,6 +13,7 @@ import static com.gonzobeans.codesample.util.StateAbbreviations.CALIFORNIA;
 
 /**
  * Created by Dave on 1/30/2017.
+ *
  */
 public class Main implements Logging {
     public static void main(String[] args) {

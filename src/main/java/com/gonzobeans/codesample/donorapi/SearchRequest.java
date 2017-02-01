@@ -20,6 +20,9 @@ public class SearchRequest {
     private Integer costToCompleteMaximum;
     private SortingOptions sortingOptions;
 
+    private static final int MAXIMUM_COST = 2147483647;
+
+
     SearchRequest() {
         this.apiKey = ApplicationConstants.API_KEY;
     }
@@ -52,16 +55,19 @@ public class SearchRequest {
         this.sortingOptions = sortingOptions;
     }
 
-    public Map<String, String> getQueryParameters() {
-        Map<String, String> queryParameters = new HashMap<String, String>();
+    public Map<String, Object> getQueryParameters() {
+        Map<String, Object> queryParameters = new HashMap<>();
         queryParameters.put("APIKey", apiKey);
-        queryParameters.put("index", (index != null) ? Integer.toString(index) : null);
-        queryParameters.put("max", (numResults != null) ? Integer.toString(numResults) : null);
+        queryParameters.put("index", index);
+        queryParameters.put("max", numResults);
         queryParameters.put("keywords", searchString);
         queryParameters.put("state", state);
         queryParameters.put("sortBy", (sortingOptions != null) ? Integer.toString(sortingOptions.getSortByValue()) : null);
-        queryParameters.put("costToCompleteRange", (costToCompleteMinimum != null && costToCompleteMaximum != null)
-                ? String.format("%d TO %d", costToCompleteMinimum, costToCompleteMaximum) : null);
+        queryParameters.put("costToCompleteRange",
+                (costToCompleteMinimum != null || costToCompleteMaximum != null) ? String.format("%d TO %d",
+                        (costToCompleteMinimum == null) ? 0 : costToCompleteMinimum,
+                        (costToCompleteMaximum) == null ? MAXIMUM_COST : costToCompleteMaximum)
+                        : null);
         return queryParameters;
     }
 
