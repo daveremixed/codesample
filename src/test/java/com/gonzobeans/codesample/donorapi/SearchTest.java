@@ -58,6 +58,7 @@ public class SearchTest implements Logging {
     public void ManyResults() {
         SearchRequest request = new SearchRequest.SearchRequestBuilder()
                 .withNumResults(50)
+                .withCostToCompleteMinimum(4000)
                 .withSortingOptions(SortingOptions.URGENCY)
                 .build();
 

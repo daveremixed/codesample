@@ -62,7 +62,7 @@ public class SearchRequest {
         queryParameters.put("max", numResults);
         queryParameters.put("keywords", searchString);
         queryParameters.put("state", state);
-        queryParameters.put("sortBy", (sortingOptions != null) ? Integer.toString(sortingOptions.getSortByValue()) : null);
+        queryParameters.put("sortBy", (sortingOptions != null) ? sortingOptions.getSortByValue() : null);
         queryParameters.put("costToCompleteRange",
                 (costToCompleteMinimum != null || costToCompleteMaximum != null) ? String.format("%d TO %d",
                         (costToCompleteMinimum == null) ? 0 : costToCompleteMinimum,
