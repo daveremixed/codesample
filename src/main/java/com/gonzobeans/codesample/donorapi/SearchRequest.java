@@ -20,9 +20,6 @@ public class SearchRequest {
     private Integer costToCompleteMaximum;
     private SortingOptions sortingOptions;
 
-    private static final int MAXIMUM_COST = 2147483647;
-
-
     SearchRequest() {
         this.apiKey = ApplicationConstants.API_KEY;
     }
@@ -66,7 +63,7 @@ public class SearchRequest {
         queryParameters.put("costToCompleteRange",
                 (costToCompleteMinimum != null || costToCompleteMaximum != null) ? String.format("%d TO %d",
                         (costToCompleteMinimum == null) ? 0 : costToCompleteMinimum,
-                        (costToCompleteMaximum) == null ? MAXIMUM_COST : costToCompleteMaximum)
+                        (costToCompleteMaximum) == null ? Integer.MAX_VALUE : costToCompleteMaximum)
                         : null);
         return queryParameters;
     }
